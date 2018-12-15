@@ -1,0 +1,87 @@
+<html>
+<head>
+<style>
+#div1 {margin:10px;font-size:1.25em;}
+table {border-collapse:collapse;border:1px solid #7f7f7f;}
+td {border:1px solid #7f7f7f;width:50px;height:50px;text-align:center;}
+</style> 
+<script>
+var totalRows = 3;
+var cellsInRow = 5;
+
+function createTable() {
+	
+	//body reference
+	var div1 = document.getElementById('div1');
+	
+	//table element
+	var tbl = document.createElement("table");
+	
+	//rows
+	for (var r = 0; r < totalRows; r++) {
+        var row = document.createElement("tr");
+		var cell = document.createElement("td");
+		var cellText = document.createField(document.write('<input id = "room" type = "text"  name="room" placeholder="" value="<?php echo $room; ?>" style="width: 60px;"/>'));
+		cell.appendChild(cellText);
+		row.appendChild(cell);
+		var cell = document.createElement("td");
+		var cellText = document.createField(document.write('<input id = "teacher" type = "text"  name="teacher" placeholder="" value="<?php echo $teacher; ?>" style="width: 60px;"/>'));
+		cell.appendChild(cellText);
+		row.appendChild(cell);
+		var cell = document.createElement("td");
+		var cellText = document.createField(document.write('<input id = "block" type = "text"  name="block" placeholder="" value="<?php echo $block; ?>" style="width: 60px;"/>'));
+		cell.appendChild(cellText);
+		row.appendChild(cell);
+		var cell = document.createElement("td");
+		var cellText = document.createField(document.write('td><input id = "year" type = "text"  name="year" placeholder="" value="<?php echo $year; ?>" style="width: 60px;"/>'));
+		cell.appendChild(cellText);
+		row.appendChild(cell);		
+		var cell = document.createElement("td");
+		var cellText = document.createField(document.write('<input id = "size" type = "number"  name="size" placeholder="" value="<?php echo $size; ?>" style="width: 60px;"/>'));
+		cell.appendChild(cellText);
+		row.appendChild(cell);	
+
+        tbl.appendChild(row); 
+		}
+    
+    div1.appendChild(tbl);
+}
+</script>
+</head>
+<body onload="createTable()" >
+<form action="" method="post" class="basic-grey"/>
+	<h2>Teacher Sign Up	</h2>
+	
+
+	<label>
+	<select>
+		
+		<option selected='true' value="" disabled selected>Subject</option>
+		<option value="computerscience" >Computer Science</option>
+		<option value="maths" >Maths</option>
+
+	</select>
+	</label>
+	
+	<label>	
+		
+		<span>Number of blocks: </span>
+		<input id = "numblocks" type = "number"  name="numblocks" placeholder="" value="<?php echo $numblocks; ?>" onchange="createTable"  />
+
+	</label>
+	
+
+	<label>
+		
+	<input type="submit" class="button" value="Submit" />
+</label>
+</form>
+<div id="div1"></div>
+
+</body>
+</html>
+
+
+
+
+

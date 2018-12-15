@@ -1,0 +1,38 @@
+<html>
+<head>
+<style>
+#div1 {margin:10px;font-size:1.25em;}
+table {border-collapse:collapse;border:1px solid #7f7f7f;}
+td {border:1px solid #7f7f7f;width:50px;height:50px;text-align:center;}
+</style>
+<script>
+var totalRows = 3;
+var cellsInRow = 5;
+
+function createTable() {
+	
+	var div1 = document.getElementById('div1');
+	var tbl = document.createElement("table");
+	
+	for (var r = 0; r < totalRows; r++) {
+	var row = document.createElement("tr");
+	var cell = document.createElement("td");
+	var cellText = document.createField(document.write('<input id = "room" type = "text"  name="room" placeholder="" value="<?php echo $room; ?>" style="width: 60px;"/>'));
+	
+
+	document.write("hello");
+	}
+}
+</script>
+</head>
+<body onload="createTable()" >
+
+<div id="div1">xxxx</div>
+
+</body>
+</html>
+
+
+
+
+
