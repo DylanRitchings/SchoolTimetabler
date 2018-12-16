@@ -212,11 +212,9 @@ function createTimeTable(courseIDList,blockList,roomIDList,teacherIDList){
 	<input id = "studentID" type = "text"  name="studentID" placeholder="" style="width: 60px;" onchange = 'getCourseID(this.value)'/>
 	
 </label> 
-<label>	
-	<span>To test, input to studentID: test1</span>
-	
-	
-</label> 
+<div id='footer'>
+		<p>To test, input to studentID: test1</p>
+</div>
 <div id='div'><table id="timetable"></table></div> 
 <?php
 include ('footer.html');
